@@ -2,7 +2,7 @@ import { Request, Response, RequestHandler } from 'express';
 import bcrypt from 'bcryptjs';
 import User from '../models/user.model';
 
-// Explicitly type the register function as RequestHandler
+
 export const register: RequestHandler = async (req: Request, res: Response): Promise<Response> => {
   try {
     const { name, email, password, role, department, collegeId, year } = req.body;
@@ -43,7 +43,7 @@ export const register: RequestHandler = async (req: Request, res: Response): Pro
   }
 };
 
-// Explicitly type the login function as RequestHandler
+
 export const login: RequestHandler = async (req: Request, res: Response): Promise<Response> => {
   try {
     const { email, password } = req.body;
